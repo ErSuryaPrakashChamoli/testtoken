@@ -1,0 +1,54 @@
+uninstall mysql
+
+https://askubuntu.com/questions/172514/how-do-i-uninstall-mysql
+sudo systemctl stop mysql
+sudo apt-get purge mysql-server mysql-client mysql-common mysql-server-core-* mysql-client-core-*
+sudo rm -rf /etc/mysql /var/lib/mysql
+sudo apt autoremove
+sudo apt autoclean
+
+
+sudo killall -9 mysql_secure_installation
+sudo mysql
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_new_strong_password';
+exit;
+sudo mysql_secure_installation
+
+install mysql 
+
+
+sudo pkill -f mysql_secure_installation
+
+
+https://askubuntu.com/questions/1406395/mysql-root-password-setup-error
+I killed the mysql_secure_installation process, sudo pkill -f mysql_secure_installation.
+ sudo mysql
+ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'my-secret-password';
+ exit
+ sudo mysql_secure_installation
+ 
+ 
+ 
+ 
+ https://askubuntu.com/questions/1242026/cannot-connect-mysql-workbench-to-mysql-server
+ sudo snap connect mysql-workbench-community:password-manager-service :password-manager-service
+ 
+ 
+   git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+…or create a new repository on the command line
+echo "# lamp" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/ErSuryaPrakashChamoli/lamp.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/ErSuryaPrakashChamoli/lamp.git
+git branch -M main
+git push -u origin main
+
+
+
